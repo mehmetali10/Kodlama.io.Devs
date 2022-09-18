@@ -15,5 +15,10 @@ namespace Persistence.Repositories
         public UserRepository(BaseDbContext context) : base(context)
         {
         }
+
+        public IList<OperationClaim> GetClaims(User user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
