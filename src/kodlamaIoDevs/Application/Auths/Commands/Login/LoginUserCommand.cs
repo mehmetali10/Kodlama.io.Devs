@@ -1,4 +1,4 @@
-﻿using Application.Features.Users.Rules;
+﻿using Application.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Security.Dtos;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Users.Commands.Login
+namespace Application.Auths.Command.Login
 {
     public class LoginUserCommand : UserForLoginDto, IRequest<AccessToken>
     {

@@ -1,5 +1,5 @@
-﻿using Application.Features.Users.Commands.Login;
-using Application.Features.Users.Commands.Register;
+﻿using Application.Auths.Command.Login;
+using Application.Auths.Command.Register;
 using AutoMapper;
 using Core.Security.Dtos;
 using Core.Security.Entities;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Users.Profiles
+namespace Applicatio.Profiles
 {
     public class MappingProfiles : Profile
     {

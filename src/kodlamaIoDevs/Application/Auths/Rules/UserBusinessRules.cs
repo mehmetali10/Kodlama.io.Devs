@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Users.Rules
+namespace Application.Rules
 {
     public class UserBusinessRules
     {
@@ -38,6 +38,12 @@ namespace Application.Features.Users.Rules
         {
             if (!HashingHelper.VerifyPasswordHash(password, passwordHash, passwordSalt))
                 throw new BusinessException("Pasword Error");
+        }
+
+        public async Task EmailCannotBeDuplicatedWhenRegistered(string email)
+        {
+            User? user = await _userRepository.GetAsync(u => u.Email == email);
+            if (user != null) throw new BusinessException("Mail already exits");
         }
     }
 }
